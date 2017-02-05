@@ -2,15 +2,21 @@
 # two numbers, and return the sum of all of the whole numbers within the range of those
 # numbers, inclusive.
 
-def sum_of_range(array)
-
+def sum_of_range(arr)
+ arr_range = arr[0]..arr[1] 
+ result = arr_range.sum
+ return result
 end
+ 
+ 
+
+ 
 
 # Driver code - don't touch anything below this line.
 puts "TESTING sum_of_range..."
 puts
 
-result = sum_of_range([1, 4])
+result = sum_of_range([1,4])
 
 puts "Your method returned:"
 puts result
@@ -22,7 +28,7 @@ else
   puts "F"
 end
 
-result = sum_of_range([4, 1])
+result = sum_of_range([4,1])
 
 puts "Your method returned:"
 puts result

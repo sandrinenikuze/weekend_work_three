@@ -2,9 +2,16 @@
 # and return true if all the letters from the second string are contained within
 # the first string, and false otherwise.
 
-def mutation?(base_word, mutation)
-
+def mutation?(first_string, second_string)
+  first_word = first_string.split("")
+  second_word = second_string.split("")
+  if first_word.include? second_word
+   return true
+  else
+    return false
+  end
 end
+
 
 # Driver code - don't touch anything below this line.
 puts "TESTING mutation?..."

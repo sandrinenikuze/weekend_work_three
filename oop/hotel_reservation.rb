@@ -13,7 +13,7 @@ class HotelReservation
   end
 
   def add_a_fridge
-    @amenities << "fridge"
+    return @amenities << "fridge"
   end
 
   def add_a_crib
@@ -31,4 +31,35 @@ end
 # The add_a_fridge method
 # The add_a_crib method
 # The add_a_custom_amenity method
+puts "HotelReservation"
+puts
 
+hotelreservation= HotelReservation.new(customer_name: "Sewabatunzi Sine", date: "December 12, 2016", room_number: 4)
+
+result = hotelreservation.add_a_fridge[0]
+puts "add_a_fridge returned:"
+puts result
+puts
+if result == "fridge"
+  puts "PASS!"
+else 
+  puts "F"
+end 
+result = hotelreservation.add_a_crib[1]
+puts "add_a_crib returned:"
+puts result
+puts
+if result == "crib"
+  puts "PASS!"
+else 
+  puts "F"
+end 
+result = hotelreservation.amenities[2]
+puts "add_a_custom_amenity returned:"
+puts result
+puts
+if result == "amnity"
+  puts "PASS!"
+else 
+  puts "F"
+end 
